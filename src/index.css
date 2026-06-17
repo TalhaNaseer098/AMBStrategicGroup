@@ -38,7 +38,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: #000000;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -67,9 +67,8 @@ button {
 
 /* Utility Classes */
 .container {
-  max-width: 1200px;
+  max-width: 1470px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 .section-tag {

@@ -1,79 +1,70 @@
+import starIcon from '../../imagesfolder/aboutsection/aboutleftstar.png'
+import azraImg from '../../imagesfolder/aboutsection/azrarehan.png'
+import womanIcon from '../../imagesfolder/aboutsection/womanownedicon.png'
+import consultingIcon from '../../imagesfolder/aboutsection/consultingicon.png'
+import enterpriseIcon from '../../imagesfolder/aboutsection/enterprisereadyicon.png'
+import strategyIcon from '../../imagesfolder/aboutsection/strategyexecutionicon.png'
+import btnIcon from '../../imagesfolder/ambiconbutton.png'
 import './About.css'
 
-const values = [
-  {
-    icon: '◆',
-    title: 'Integrity',
-    desc: 'We build lasting relationships through transparent, ethical business practices.',
-  },
-  {
-    icon: '◈',
-    title: 'Excellence',
-    desc: 'Every engagement is driven by a relentless commitment to delivering superior outcomes.',
-  },
-  {
-    icon: '◉',
-    title: 'Innovation',
-    desc: 'We leverage cutting-edge methodologies to solve complex business challenges.',
-  },
+const boxes = [
+  { icon: womanIcon,      label: 'Woman-owned business' },
+  { icon: consultingIcon, label: 'AI + Consulting Expertise' },
+  { icon: enterpriseIcon, label: 'Enterprise-Ready Delivery' },
+  { icon: strategyIcon,   label: 'Strategy + Execution Model' },
 ]
 
 export default function About() {
   return (
     <section id="about" className="about">
-      <div className="container about__grid">
-        <div className="about__visual">
-          <div className="about__image-wrap">
-            <div className="about__image-placeholder">
-              <div className="about__image-inner">
-                <span className="about__image-logo">AMB</span>
-                <span className="about__image-tagline">Strategic Group</span>
-              </div>
+      <div className="container">
+
+        {/* Top Row */}
+        <div className="about__top">
+          <div className="about__left">
+            <p className="about__tag">
+              <img src={starIcon} alt="" className="about__tag-icon" />
+              About us
+            </p>
+            <h2 className="about__title">Led by Industry Experts.</h2>
+            <p className="about__desc">
+              AMB Strategic Group is led by seasoned transformation professionals who have delivered
+              complex programs, operational improvements, and technology initiatives across enterprise
+              organizations. Our experience enables us to align strategy, execution, and innovation
+              to drive measurable business outcomes.
+            </p>
+          </div>
+
+          <div className="about__right">
+            <img src={azraImg} alt="Azra Rehan" className="about__person-img" />
+            <div className="about__person-info">
+              <p className="about__founder">Founder &amp; CEO</p>
+              <h3 className="about__name">Azra Rehan</h3>
+              <a href="#" className="about__linkedin">
+                Connect on LinkedIn
+              </a>
             </div>
-            <div className="about__exp-badge">
-              <span className="about__exp-num">15+</span>
-              <span className="about__exp-label">Years of<br />Excellence</span>
-            </div>
-            <div className="about__shape about__shape--1"></div>
-            <div className="about__shape about__shape--2"></div>
           </div>
         </div>
 
-        <div className="about__content">
-          <span className="section-tag">Who We Are</span>
-          <h2 className="section-title">
-            A Partner in Your<br />Strategic Journey
-          </h2>
-          <p className="about__text">
-            Founded with a mission to bridge the gap between ambition and achievement, AMB Strategic
-            Group has been at the forefront of business transformation for over 15 years. We partner
-            with organizations across industries to design strategies that endure.
-          </p>
-          <p className="about__text">
-            Our multidisciplinary team brings together expertise in corporate strategy, financial
-            advisory, digital transformation, and organizational development — offering an integrated
-            approach that drives measurable results.
-          </p>
+        {/* Boxes Row */}
+        <div className="about__boxes">
+          {boxes.map((box) => (
+            <div key={box.label} className="about__box">
+              <img src={box.icon} alt={box.label} className="about__box-icon" />
+              <p className="about__box-label">{box.label}</p>
+            </div>
+          ))}
+        </div>
 
-          <div className="about__values">
-            {values.map((v) => (
-              <div key={v.title} className="about__value">
-                <div className="about__value-icon">{v.icon}</div>
-                <div>
-                  <h4 className="about__value-title">{v.title}</h4>
-                  <p className="about__value-desc">{v.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <a href="#services" className="about__link">
-            Explore Our Services
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+        {/* Know More Button */}
+        <div className="about__btn-wrap">
+          <a href="#" className="about__btn">
+            Know More
+            <img src={btnIcon} alt="" className="about__btn-icon" />
           </a>
         </div>
+
       </div>
     </section>
   )

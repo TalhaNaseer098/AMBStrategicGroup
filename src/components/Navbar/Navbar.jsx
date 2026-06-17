@@ -1,24 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import logoImg from '../../imagesfolder/ambheaderlogo.png'
+import iconBtn from '../../imagesfolder/ambiconbutton.png'
 import './Navbar.css'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Team', href: '#team' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Business Transformation', href: '#services' },
+  { label: 'AI & Automation', href: '#ai-automation' },
+  { label: 'Faqs', href: '#faqs' },
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeLink, setActiveLink] = useState('#home')
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   const handleNavClick = (href) => {
     setActiveLink(href)
@@ -26,11 +21,11 @@ export default function Navbar() {
   }
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className="navbar">
       <div className="container navbar__inner">
+
         <a href="#home" className="navbar__logo" onClick={() => handleNavClick('#home')}>
-          <span className="navbar__logo-amb">AMB</span>
-          <span className="navbar__logo-text">Strategic Group</span>
+          <img src={logoImg} alt="AMB Strategic Group" className="navbar__logo-img" />
         </a>
 
         <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>
@@ -41,13 +36,15 @@ export default function Navbar() {
               className={`navbar__link ${activeLink === link.href ? 'navbar__link--active' : ''}`}
               onClick={() => handleNavClick(link.href)}
             >
-              {link.label}
+              <span className="navbar__link-text" data-text={link.label}>{link.label}</span>
             </a>
           ))}
-          <a href="#contact" className="navbar__cta" onClick={() => handleNavClick('#contact')}>
-            Get Started
-          </a>
         </nav>
+
+        <a href="#contact" className="navbar__cta" onClick={() => handleNavClick('#contact')}>
+          Contact us
+          <img src={iconBtn} alt="" className="navbar__cta-icon" />
+        </a>
 
         <button
           className={`navbar__toggle ${menuOpen ? 'navbar__toggle--open' : ''}`}
@@ -58,6 +55,7 @@ export default function Navbar() {
           <span></span>
           <span></span>
         </button>
+
       </div>
     </header>
   )

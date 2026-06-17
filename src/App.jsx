@@ -1,24 +1,31 @@
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
-import Services from './components/Services/Services'
-import Stats from './components/Stats/Stats'
-import Team from './components/Team/Team'
-import Contact from './components/Contact/Contact'
+import HowWeCan from './components/HowWeCan/HowWeCan'
+import HowItWorks from './components/HowItWorks/HowItWorks'
+import WhyAMB from './components/WhyAMB/WhyAMB'
+import Packages from './components/Packages/Packages'
+import FAQs from './components/FAQs/FAQs'
+import GetStarted from './components/GetStarted/GetStarted'
 import Footer from './components/Footer/Footer'
 import './App.css'
+import './responsive.css'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <main>
+      <div className="hero-wrapper">
+        <Navbar />
         <Hero />
+      </div>
+      <main>
         <About />
-        <Services />
-        <Stats />
-        <Team />
-        <Contact />
+        <HowWeCan />
+        <HowItWorks />
+        <Packages />
+        <WhyAMB />
+        <FAQs />
+        <GetStarted />
       </main>
       <Footer />
     </>

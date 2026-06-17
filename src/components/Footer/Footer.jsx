@@ -1,56 +1,91 @@
+import footerLogo from '../../imagesfolder/ambheaderlogo.png'
+import facebookIcon from '../../imagesfolder/footersection/facebookicon.png'
+import instaIcon from '../../imagesfolder/footersection/instaicon.png'
+import linkedIcon from '../../imagesfolder/footersection/linkedicon.png'
+import xIcon from '../../imagesfolder/footersection/xicon.png'
 import './Footer.css'
 
-const footerLinks = {
-  Services: ['Corporate Strategy', 'Financial Advisory', 'Digital Transformation', 'Org Development', 'Market Expansion'],
-  Company: ['About Us', 'Our Team', 'Careers', 'Press', 'Contact'],
-  Resources: ['Case Studies', 'White Papers', 'Blog', 'Events', 'Newsletter'],
-}
+const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Business Transformation', href: '#how-we-can' },
+  { label: 'AI & Automation', href: '#how-it-works' },
+  { label: 'FAQs', href: '#faqs' },
+  { label: 'Contact Us', href: '#contact' },
+]
+
+const socialIcons = [
+  { label: 'Facebook', img: facebookIcon },
+  { label: 'Instagram', img: instaIcon },
+  { label: 'LinkedIn', img: linkedIcon },
+  { label: 'X', img: xIcon },
+]
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer__top">
-          <div className="footer__brand">
-            <div className="footer__logo">
-              <span className="footer__logo-amb">AMB</span>
-              <span className="footer__logo-text">Strategic Group</span>
+
+      <div className="footer__main">
+        <div className="container">
+
+          {/* Row 1: Logo + Desc | Nav */}
+          <div className="footer__row1">
+            <div className="footer__left">
+              <img src={footerLogo} alt="AMB Strategic Group" className="footer__logo" />
+              <p className="footer__desc">
+                Whether you're modernizing a regulated platform, standing up governance,
+                or exploring where AI fits in your operating model — we'd be glad to talk.
+              </p>
             </div>
-            <p className="footer__tagline">
-              Transforming organizations through strategic excellence, financial acumen, and operational innovation since 2010.
-            </p>
-            <div className="footer__social">
-              {['in', 'tw', 'ig'].map((s) => (
-                <a key={s} href="#" className="footer__social-btn">{s}</a>
+            <nav className="footer__nav">
+              {navLinks.map((link) => (
+                <a key={link.label} href={link.href} className="footer__nav-link">
+                  <span className="footer__nav-link-text" data-text={link.label}>{link.label}</span>
+                </a>
               ))}
+            </nav>
+          </div>
+
+          {/* Row 2: Social Icons | Contact + Location */}
+          <div className="footer__row2">
+            <div className="footer__social">
+              <p className="footer__social-label">Follow us on</p>
+              <div className="footer__social-icons">
+                {socialIcons.map((icon) => (
+                  <a key={icon.label} href="#" className="footer__social-icon" aria-label={icon.label}>
+                    <img src={icon.img} alt={icon.label} />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="footer__right">
+              <div className="footer__info-block">
+                <h4 className="footer__info-title">Contact Us</h4>
+                <a href="tel:+19998887766" className="footer__info-text footer__info-text--mb">+1 (999) 888-77-66</a>
+                <a href="mailto:info@ambstrategicgroup.com" className="footer__info-text">ambstrategicgroup.com</a>
+              </div>
+              <div className="footer__info-block">
+                <h4 className="footer__info-title">Location</h4>
+                <p className="footer__info-text footer__info-text--address">1209 Barton Springs Rd Texas, Austin, United States</p>
+              </div>
             </div>
           </div>
 
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category} className="footer__col">
-              <h4 className="footer__col-title">{category}</h4>
-              <ul className="footer__links">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="footer__link">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
+      </div>
 
-        <div className="footer__bottom">
-          <p className="footer__copy">
-            © {new Date().getFullYear()} AMB Strategic Group. All rights reserved.
-          </p>
+      {/* Bottom bar */}
+      <div className="footer__bottom">
+        <div className="container">
+          <p className="footer__copy">© 2026 AMB Strategic Group · Woman-Owned Business</p>
           <div className="footer__legal">
-            <a href="#" className="footer__legal-link">Privacy Policy</a>
-            <a href="#" className="footer__legal-link">Terms of Service</a>
-            <a href="#" className="footer__legal-link">Cookie Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Services</a>
           </div>
         </div>
       </div>
+
     </footer>
   )
 }
