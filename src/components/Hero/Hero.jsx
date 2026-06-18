@@ -38,7 +38,7 @@ export default function Hero() {
           modernize operations, and implement AI where it actually creates impact — not noise.
         </p>
 
-        <a href="#contact" className="hero__btn">
+        <a href="#contact" className="hero__btn" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
           <img src={btnIcon} alt="" className="hero__btn-icon" />
           Book a Strategy Call
         </a>

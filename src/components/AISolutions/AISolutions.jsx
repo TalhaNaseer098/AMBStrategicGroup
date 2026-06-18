@@ -1,4 +1,5 @@
 import starImg from '../../imagesfolder/howitworks/howitworkstarimg.png'
+import btnIcon from '../../imagesfolder/herosectionimg/ambbuttonicon.png'
 import icon1 from '../../imagesfolder/businesssolutionspage/solutionsweprovide/Group 48097664.png'
 import icon2 from '../../imagesfolder/businesssolutionspage/solutionsweprovide/Group 48097667.png'
 import icon3 from '../../imagesfolder/businesssolutionspage/solutionsweprovide/Group 48097697.png'
@@ -102,7 +103,8 @@ export default function AISolutions() {
 
         {/* CTA */}
         <div className="aisolutions__cta">
-          <a href="#contact" className="aisolutions__cta-btn">
+          <a href="#contact" className="aisolutions__cta-btn" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+            <img src={btnIcon} alt="" className="aisolutions__cta-btn-icon" />
             Book a Strategy Call
           </a>
         </div>

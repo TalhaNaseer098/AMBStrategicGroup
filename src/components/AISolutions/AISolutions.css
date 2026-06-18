@@ -164,6 +164,12 @@
   transition: background-position 0.4s ease;
 }
 
+.aisolutions__cta-btn-icon {
+  width: 13.5px;
+  height: 13.5px;
+  object-fit: contain;
+}
+
 .aisolutions__cta-btn:hover {
   background-position: 100% 0%;
 }

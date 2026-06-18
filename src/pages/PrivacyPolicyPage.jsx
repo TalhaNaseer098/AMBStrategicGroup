@@ -7,6 +7,7 @@ export default function PrivacyPolicyPage() {
     <div className="legal-page-wrap">
       <Navbar />
       <main className="legal">
+        <div className="container">
         <div className="legal__container">
 
           <h1 className="legal__title">Privacy Policy</h1>
@@ -133,6 +134,7 @@ export default function PrivacyPolicyPage() {
             </div>
           </div>
 
+        </div>
         </div>
       </main>
       <Footer />

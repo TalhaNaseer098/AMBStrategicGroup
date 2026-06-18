@@ -99,7 +99,7 @@ export default function BusinessSection() {
 
         {/* Book Consultation CTA */}
         <div className="bsection__cta">
-          <a href="#contact" className="bsection__cta-btn">
+          <a href="#contact" className="bsection__cta-btn" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
             <img src={btnIcon} alt="" className="bsection__cta-icon" />
             Book a Strategy Call
           </a>

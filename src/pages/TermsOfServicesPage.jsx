@@ -7,6 +7,7 @@ export default function TermsOfServicesPage() {
     <div className="legal-page-wrap">
       <Navbar />
       <main className="legal">
+        <div className="container">
         <div className="legal__container">
 
           <h1 className="legal__title">Terms of Service</h1>
@@ -154,6 +155,7 @@ export default function TermsOfServicesPage() {
             </div>
           </div>
 
+        </div>
         </div>
       </main>
       <Footer />

@@ -51,7 +51,7 @@ export default function HowItWorks({ noBefore }) {
         </div>
 
         <div className="howitworks__btn-wrap">
-          <a href="#contact" className="hero__btn howitworks__btn">
+          <a href="#contact" className="hero__btn howitworks__btn" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
             <img src={btnIcon} alt="" className="hero__btn-icon" />
             Book a Strategy Call
           </a>

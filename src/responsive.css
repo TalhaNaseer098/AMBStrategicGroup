@@ -17,7 +17,7 @@
   .navbar--scrolled     { padding: 0.94vw 0; }
   .navbar__logo-img     { width: 11.46vw; }
   .navbar__nav          { gap: 4.32vw; }
-  .navbar__link         { font-size: 0.83vw; }
+  .navbar__link         { font-size: 0.83vw; line-height: 0.9896vw; }
   .navbar__cta          { gap: 0.52vw; padding: 0.78vw 1.30vw; font-size: 0.73vw; border-radius: 0.36vw; }
   .navbar__cta-icon     { width: 0.31vw; height: 0.47vw; }
   .navbar--scrolled     { box-shadow: 0 0.10vw 1.04vw rgba(0,0,0,0.5); }
@@ -28,7 +28,7 @@
   .hero                       { padding: 7.60vw 0 1.56vw; }
   .hero__side-img             { width: 23.44vw; height: 30.21vw; }
   .hero__side-img--left       { bottom: 6.25vw; }
-  .hero__badge                { font-size: 0.73vw; padding: 0.78vw 1.30vw; border-radius: 5.21vw; }
+  .hero__badge                { font-size: 0.73vw; line-height: 0.9375vw; padding: 0.78vw 1.30vw; border-radius: 5.21vw; }
   .hero__badge::before        { border-radius: 5.21vw; padding: 0.05vw; }
   @keyframes floatLeft  { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(0.94vw); } }
   @keyframes floatRight { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-0.94vw); } }
@@ -55,7 +55,7 @@
   .about-banner__stat-label       { width: 11.98vw; font-size: 1.04vw; }
 
   /* ── Legal Pages (Privacy Policy / Terms) ── */
-  .legal                    { padding: 4.17vw 0 6.25vw; }
+  .legal                    { padding: 3vw 0 3vw; }
   .legal__container         { max-width: 44.79vw; padding: 0 2.08vw 0 4.17vw; }
   .legal__title             { font-size: 2.19vw; margin: 0 0 0.52vw; }
   .legal__date              { font-size: 0.73vw; margin: 0 0 2.08vw; }
@@ -148,7 +148,7 @@
   .about__person-info   { height: 12.45vw; }
   .about__founder       { font-size: 0.83vw; padding-bottom: 0.68vw; }
   .about__name          { width: 9.74vw; font-size: 3.17vw; padding-bottom: 1.30vw; }
-  .about__linkedin      { font-size: 0.73vw; padding: 0.78vw 1.30vw; }
+  .about__linkedin      { font-size: 0.73vw; line-height: 0.9375vw; padding: 0.78vw 1.30vw; }
   .about__boxes         { gap: 1.56vw; margin-top: 3.39vw; }
   .about__box           { padding: 2.55vw 0 1.93vw; border-radius: 0.63vw; }
   .about__box::before   { border-radius: 0.63vw; padding: 0.08vw; }
@@ -339,6 +339,8 @@
   .footer__legal          { gap: 1.25vw; }
   .footer__copy           { font-size: 0.83vw; }
   .footer__legal a        { font-size: 0.83vw; }
+
+  .legal__container { max-width: 44.79vw; padding: 0; }
 
 } /* end @media (min-width: 992px) */
 

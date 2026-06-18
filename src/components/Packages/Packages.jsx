@@ -77,7 +77,7 @@ export default function Packages() {
 
               <p className="pkg-card__desc">{pkg.desc}</p>
 
-              <a href="#contact" className={`pkg-card__btn ${pkg.popular ? 'pkg-card__btn--popular' : ''}`}>
+              <a href="#contact" className={`pkg-card__btn ${pkg.popular ? 'pkg-card__btn--popular' : ''}`} onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 Talk To Us
                 <img src={btnIcon} alt="" className="pkg-card__btn-icon" />
               </a>

@@ -59,7 +59,7 @@ export default function About() {
 
         {/* Know More Button */}
         <div className="about__btn-wrap">
-          <a href="#contact" className="about__btn">
+          <a href="#contact" className="about__btn" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
             Know More
             <img src={btnIcon} alt="" className="about__btn-icon" />
           </a>
