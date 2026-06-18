@@ -690,6 +690,7 @@
   .howwecan__desc     { font-size: 15px; }
   .hwc-card           { padding: 36px 24px 28px; }
   .hwc-card__img      { display: none; }
+  .hwc-card__btn-icon { display: none; }
 
   .howitworks         { padding: 50px 0 40px; }
   .howitworks__title  { font-size: 24px; }
