@@ -549,37 +549,58 @@
   .legal__title             { font-size: 30px; }
   .legal__h2                { font-size: 18px; }
 
-  .faqs-banner__title           { font-size: 32px; }
-  .faqs-banner__desc            { font-size: 15px; }
+  .about-banner               { padding: 70px 0 50px; }
+  .about-banner__title        { width: 100%; font-size: 36px; padding: 30px 0 24px; }
+  .about-banner__desc         { width: 100%; font-size: 16px; }
+  .about-banner__sub          { width: 100%; font-size: 16px; padding: 40px 0; }
+  .about-banner__stats        { flex-wrap: wrap; gap: 20px; }
+  .about-banner__stat-box     { padding: 24px 20px; }
+  .about-banner__stat-number  { font-size: 44px; line-height: 1.2; }
+  .about-banner__stat-label   { width: 100%; font-size: 15px; }
 
+  .faqs-banner                  { padding: 70px 0 0; }
+  .faqs-banner__title           { font-size: 32px; }
+  .faqs-banner__desc            { width: 100%; font-size: 15px; }
+
+  .ai-banner                    { padding: 70px 0 50px; }
   .ai-banner__title             { font-size: 32px; }
-  .ai-banner__desc              { font-size: 15px; }
+  .ai-banner__desc              { width: 100%; font-size: 15px; }
   .aisolutions__title           { font-size: 28px; }
   .aisolutions__card            { padding: 30px 24px; }
   .aisolutions__card-title      { font-size: 20px; }
   .aisolutions__card-desc       { font-size: 15px; }
   .aisolutions__icon            { height: 70px; }
 
+  .bt-banner                    { padding: 70px 0 50px; }
   .bt-banner__title             { font-size: 32px; }
-  .bt-banner__desc              { font-size: 15px; }
+  .bt-banner__desc              { width: 100%; font-size: 15px; }
   .bsection__title              { font-size: 28px; }
   .bsection__row                { flex-direction: column; }
   .bsection__card               { flex: none; width: 100%; }
-  .bsection__card--bottom       { flex: none; max-width: 100%; width: 100%; }
+  .bsection__card--bottom       { flex: none; max-width: 100%; width: 100%; flex-direction: column; padding: 30px; }
+  .bsection__card-desc          { width: 100%; font-size: 13px; }
 
   .contact-banner               { padding: 70px 0 50px; }
   .contact-banner__title        { font-size: 32px; }
 
   .founder__title           { font-size: 54px; }
   .founder__card-name       { font-size: 36px; }
+  .founder__desc            { font-size: 15px; }
+  .founder__cred-row        { flex-direction: column; gap: 20px; }
+  .founder__cred-box        { width: 100%; }
+  .founder__cred-detail     { width: 100%; }
   .our-model__title         { font-size: 28px; }
   .our-model__desc          { font-size: 16px; }
+  .our-model__card-label    { font-size: 20px; }
+  .our-model__tagline       { font-size: 22px; }
   .our-model__cards         { flex-direction: column; }
   .our-model__card          { flex: none; width: 100%; }
   .our-philosophy__title    { font-size: 30px; }
-  .our-philosophy__desc     { font-size: 18px; }
+  .our-philosophy__desc     { width: 100%; font-size: 18px; }
+  .our-philosophy__star-wrap { width: 260px; height: 260px; }
+  .our-philosophy__star     { width: 260px; }
   .whatwedo__title          { font-size: 28px; }
-  .whatwedo__desc           { font-size: 15px; }
+  .whatwedo__desc           { width: 100%; font-size: 15px; }
   .whatwedo__cards          { flex-direction: column; }
   .whatwedo__card           { flex: none; width: 100%; }
   .whatwedo__tagline        { font-size: 24px; }
@@ -643,15 +664,33 @@
   .pkg-card__desc     { font-size: 13px; }
   .packages__note     { width: 100%; font-size: 11px; padding-top: 36px; }
 
+  .about-banner               { padding: 60px 0 40px; }
+  .about-banner__title        { font-size: 28px; padding: 24px 0 20px; }
+  .about-banner__desc         { font-size: 15px; }
+  .about-banner__sub          { font-size: 15px; padding: 30px 0; }
+  .about-banner__stat-number  { font-size: 36px; }
+  .about-banner__stat-label   { font-size: 14px; }
+
   .founder            { padding: 60px 0 40px; }
   .founder__title     { font-size: 44px; }
+  .founder__card-name { font-size: 28px; }
+  .founder__desc      { font-size: 14px; }
   .our-model__title   { font-size: 24px; }
+  .our-model__desc    { font-size: 14px; }
+  .our-model__tagline { font-size: 20px; }
   .our-philosophy     { padding: 60px 0; }
   .our-philosophy__title  { font-size: 26px; }
-  .our-philosophy__star-wrap { width: 240px; height: 240px; }
-  .our-philosophy__star    { width: 240px; }
+  .our-philosophy__desc   { font-size: 16px; }
+  .our-philosophy__star-wrap { width: 220px; height: 220px; }
+  .our-philosophy__star    { width: 220px; }
   .whatwedo__title    { font-size: 24px; }
-  .whatwedo__tagline  { font-size: 20px; padding-top: 50px; }
+  .whatwedo__desc     { font-size: 14px; }
+  .whatwedo__tagline  { font-size: 18px; padding-top: 40px; }
+
+  .faqs-banner__desc            { font-size: 14px; }
+  .aisolutions__card-title      { font-size: 18px; }
+  .aisolutions__card-desc       { font-size: 14px; }
+  .bt-banner__desc              { font-size: 14px; }
 
   .whyamb             { padding: 50px 0 30px; }
   .whyamb__title      { font-size: 28px; }
@@ -756,17 +795,46 @@
   .legal__title             { font-size: 22px; }
   .legal__h2                { font-size: 16px; }
 
+  .about-banner               { padding: 50px 0 30px; }
+  .about-banner__title        { font-size: 24px; padding: 20px 0 16px; }
+  .about-banner__desc         { font-size: 14px; }
+  .about-banner__sub          { font-size: 14px; padding: 24px 0; }
+  .about-banner__stat-box     { padding: 20px 16px; }
+  .about-banner__stat-number  { font-size: 30px; }
+  .about-banner__stat-label   { font-size: 13px; }
+
+  .faqs-banner                  { padding: 60px 0 0; }
   .faqs-banner__title           { font-size: 22px; }
+  .faqs-banner__desc            { font-size: 13px; }
 
+  .ai-banner                    { padding: 60px 0 40px; }
   .ai-banner__title             { font-size: 22px; }
+  .ai-banner__desc              { font-size: 13px; }
   .aisolutions__title           { font-size: 20px; }
-  .aisolutions__card-title      { font-size: 18px; }
+  .aisolutions__card-title      { font-size: 16px; }
+  .aisolutions__card-desc       { font-size: 13px; }
+  .aisolutions__card            { padding: 24px 16px; gap: 20px; }
 
+  .bt-banner                    { padding: 60px 0 40px; }
   .bt-banner__title             { font-size: 22px; }
+  .bt-banner__desc              { font-size: 13px; }
   .bsection__title              { font-size: 20px; }
+  .bsection__card               { padding: 24px 20px; }
 
   .contact-banner               { padding: 50px 0 30px; }
-  .contact-banner__title        { font-size: 24px; }
+  .contact-banner__title        { font-size: 22px; }
+
+  .founder__title           { font-size: 36px; }
+  .founder__card-name       { font-size: 24px; }
+  .founder__cred-label      { font-size: 12px; }
+  .founder__cred-name       { font-size: 16px; }
+  .our-model__title         { font-size: 22px; }
+  .our-model__tagline       { font-size: 18px; }
+  .our-philosophy__title    { font-size: 22px; }
+  .our-philosophy__star-wrap { width: 200px; height: 200px; }
+  .our-philosophy__star     { width: 200px; }
+  .whatwedo__title          { font-size: 22px; }
+  .whatwedo__tagline        { font-size: 16px; }
 
   .faqs               { padding: 30px 0 40px; }
   .faqs__title        { font-size: 32px; }
@@ -819,16 +887,33 @@
   .legal__title             { font-size: 20px; }
   .legal__container         { padding: 0 16px 0 16px; }
 
+  .about-banner__title        { font-size: 20px; }
+  .about-banner__stat-number  { font-size: 24px; }
+  .about-banner__stat-label   { font-size: 12px; }
+
   .faqs-banner__title           { font-size: 19px; }
+  .faqs-banner__desc            { font-size: 12px; }
 
   .ai-banner__title             { font-size: 19px; }
+  .ai-banner__desc              { font-size: 12px; }
   .aisolutions__title           { font-size: 18px; }
-  .aisolutions__card-title      { font-size: 16px; }
+  .aisolutions__card-title      { font-size: 15px; }
+  .aisolutions__card-desc       { font-size: 12px; }
 
   .bt-banner__title             { font-size: 19px; }
+  .bt-banner__desc              { font-size: 12px; }
   .bsection__title              { font-size: 18px; }
 
-  .contact-banner__title        { font-size: 20px; }
+  .contact-banner__title        { font-size: 19px; }
+
+  .founder__title           { font-size: 28px; }
+  .founder__card-name       { font-size: 20px; }
+  .our-model__title         { font-size: 19px; }
+  .our-philosophy__title    { font-size: 19px; }
+  .our-philosophy__star-wrap { width: 180px; height: 180px; }
+  .our-philosophy__star     { width: 180px; }
+  .whatwedo__title          { font-size: 19px; }
+  .whatwedo__tagline        { font-size: 15px; }
 
   .faqs__title        { font-size: 28px; }
   .faq-item__question { font-size: 13px; }
