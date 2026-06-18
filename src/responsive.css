@@ -382,7 +382,7 @@
   .howitworks__title  { font-size: 32px; }
   .howitworks__desc   { width: 80%; font-size: 15px; }
   .howitworks__cards  { flex-wrap: wrap; justify-content: center; }
-  .hiw-card           { flex: 0 0 calc(50% - 15px); max-width: calc(50% - 15px); padding: 30px; }
+  .hiw-card           { flex: 0 0 calc(50% - 15px); max-width: calc(50% - 15px); padding: 30px 20px; }
   .hiw-card__top      { flex-direction: column-reverse; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
   .hiw-card__icon     { width: 40px; height: 40px; }
   .hiw-card__desc     { width: 100%; }
@@ -394,64 +394,86 @@
   .pkg-card__desc     { width: 100%; }
   .packages__note     { width: 80%; }
 
-  .founder                  { padding: 80px 0 60px; }
+  .founder                  { padding: 40px 0 30px; }
   .founder__inner           { flex-direction: column; gap: 40px; }
-  .founder__title           { font-size: 70px; margin-bottom: 20px; }
-  .founder__image-wrap      { width: 100%; height: auto; position: relative; top: 0; }
-  .founder__card            { position: relative; top: auto; left: auto; width: 100%; box-sizing: border-box; margin-top: 20px; }
-  .founder__right           { position: relative; right: auto; width: 100%; }
-  .founder__desc            { width: 100%; font-size: 16px; }
+  .founder__title           { font-size: 50px; margin-bottom: 20px; }
+  .founder__left            { order: 1; width: 100%; }
+  .founder__image-wrap      { width: 400px; height: auto; position: relative; top: 0; margin: 0 auto; }
+  .founder__img             { width: 100%; height: auto; object-fit: cover; display: block; }
+  .founder__card            { position: absolute; top: auto; bottom: 30px; left: 50%; right: auto; transform: translateX(-50%); width: 80%; padding: 20px 24px 40px; text-align: center; }
+  .founder__card-name       { font-size: 36px; }
+  .founder__right           { order: -1; position: relative; right: auto; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .founder__desc            { width: 100%; font-size: 14px; line-height: 160%; }
   .founder__cred-row        { flex-wrap: wrap; }
   .our-model                { padding: 60px 0; }
   .our-model__title         { font-size: 32px; }
-  .our-model__desc          { width: 100%; font-size: 18px; }
-  .our-model__cards         { flex-wrap: wrap; }
-  .our-model__card          { flex: 1 1 calc(50% - 15px); }
+  .our-model__desc          { width: 80%; font-size: 16px; padding: 20px 0 45px; }
+  .our-model__cards         { flex-wrap: wrap; justify-content: center; }
+  .our-model__card          { flex: 0 0 calc(50% - 15px); max-width: calc(50% - 15px); }
   .our-model__card-label    { width: auto; }
-  .our-model__tagline       { width: 100%; font-size: 26px; }
-  .our-philosophy           { padding: 70px 0; }
-  .our-philosophy__inner    { flex-direction: column; gap: 40px; }
-  .our-philosophy__title    { font-size: 38px; }
+  .our-model__tagline       { width: 100%; font-size: 18px; padding-top: 50px; }
+  .our-philosophy           { padding: 50px 0; }
+  .our-philosophy__inner    { flex-direction: column; gap: 40px; align-items: center; }
+  .our-philosophy__left     { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .our-philosophy__title    { font-size: 34px; }
   .our-philosophy__desc     { width: 100%; font-size: 20px; }
-  .our-philosophy__star-wrap { width: 300px; height: 300px; }
-  .our-philosophy__star     { width: 300px; }
+  .our-philosophy__star-wrap  { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 14px; width: 100%; height: auto; }
+  .our-philosophy__star       { width: 200px; height: auto; order: 5; flex: 0 0 auto; margin-top: 30px; }
+  .our-philosophy__badge      { position: static; white-space: nowrap; flex: 0 0 calc(50% - 7px); text-align: center; justify-content: center; }
+  .badge--cleaner             { order: 1; }
+  .badge--ownership           { order: 2; }
+  .badge--ai                  { order: 3; }
+  .badge--smarter             { order: 4; }
   .whatwedo                 { padding: 60px 0 100px; }
   .whatwedo__title          { font-size: 32px; }
-  .whatwedo__desc           { width: 100%; }
+  .whatwedo__desc           { width: 90%; padding: 20px 0 40px; }
   .whatwedo__cards          { flex-wrap: wrap; }
   .whatwedo__card           { flex: 1 1 calc(50% - 15px); }
   .whatwedo__tagline        { font-size: 26px; }
 
   .whyamb             { padding: 70px 0 40px; }
   .whyamb__title      { font-size: 30px; line-height: 40px; margin-bottom: 20px; }
-  .whyamb__desc       { width: 90%; font-size: 12px; margin-bottom: 30px; }
+  .whyamb__desc       { width: 80%; font-size: 12px; margin-bottom: 30px; }
   .whyamb__statement  { width: 90%; font-size: 14px; }
   .whyamb__bottom-img { width: 100%; height: auto; }
   .whyamb__badge      { display: none; }
   .whyamb__inner::before { width: 100%; height: 340px; }
 
-  .legal                    { padding: 70px 0 100px; }
+  .legal                    { padding: 50px 0 40px; }
   .legal__container         { max-width: 100%; padding: 0 40px 0 50px; }
   .legal__title             { font-size: 34px; }
+  .legal__date              { font-size: 14px; color: #777777; margin: 0 0 20px; }
   .legal__h2                { font-size: 20px; }
   .legal__intro             { font-size: 15px; }
   .legal__p                 { font-size: 15px; }
   .legal__li                { font-size: 15px; }
 
-  .faqs-banner                  { padding: 80px 0 0; }
-  .faqs-banner__title           { width: 100%; font-size: 40px; }
+  .about-banner               { padding: 50px 0 60px; }
+  .about-banner__title        { width: 100%; font-size: 42px; padding: 30px 0 24px; }
+  .about-banner__desc         { width: 100%; font-size: 18px; }
+  .about-banner__sub          { width: 100%; font-size: 18px; padding: 40px 0; }
+  .about-banner__stats        { flex-wrap: wrap; gap: 30px; }
+  .about-banner__stat-box     { flex: 0 0 calc(50% - 15px); padding: 30px; }
+  .about-banner__stat-number  { font-size: 54px; line-height: 1.2; }
+  .about-banner__stat-label   { width: 100%; font-size: 16px; }
+
+  .faqs-banner                  { padding: 50px 0 0; }
+  .faqs-banner__badge           { padding: 9px 24px; }
+  .faqs-banner__title           { width: 100%; font-size: 34px; }
   .faqs-banner__desc            { width: 100%; }
 
-  .ai-banner                    { padding: 80px 0 60px; }
-  .ai-banner__title             { width: 100%; font-size: 40px; }
+  .ai-banner                    { padding: 50px 0 30px; }
+  .ai-banner__title             { width: 100%; font-size: 35px; padding: 25px 0 25px; }
   .ai-banner__desc              { width: 100%; }
-  .aisolutions                  { padding: 60px 0; }
+  .aisolutions                  { padding: 60px 0 40px; }
   .aisolutions__container       { max-width: 100%; }
   .aisolutions__header          { margin-bottom: 50px; }
   .aisolutions__title           { font-size: 32px; }
-  .aisolutions__card            { flex-direction: column; gap: 30px; padding: 40px 30px; }
+  .aisolutions__card            { flex-direction: column; align-items: center; text-align: center; gap: 30px; padding: 40px 30px; }
   .aisolutions__card--reverse   { flex-direction: column; }
   .aisolutions__card--reverse .aisolutions__content { max-width: 100%; }
+  .aisolutions__content         { align-items: center; }
+  .aisolutions__icons           { justify-content: center; }
   .aisolutions__card-title      { font-size: 22px; }
   .aisolutions__card-desc       { max-width: 100%; font-size: 16px; }
   .aisolutions__icon            { height: 80px; }
@@ -459,16 +481,22 @@
   .bt-banner                    { padding: 80px 0 60px; }
   .bt-banner__title             { width: 100%; font-size: 40px; }
   .bt-banner__desc              { width: 100%; }
-  .bsection                     { padding: 60px 0; }
+  .bsection                     { padding: 60px 0 20px; }
   .bsection__header             { padding-bottom: 60px; }
   .bsection__title              { font-size: 32px; }
-  .bsection__row                { flex-wrap: wrap; }
-  .bsection__card               { flex: 1 1 calc(50% - 12px); }
-  .bsection__card--bottom       { flex: 1 1 calc(50% - 12px); max-width: calc(50% - 12px); }
+  .bsection__row                { flex-wrap: wrap; justify-content: center; }
+  .bsection__card               { flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); align-items: center; text-align: center; padding: 30px 20px; }
+  .bsection__card-header        { justify-content: center; margin-bottom: 0; }
+  .bsection__card-star          { display: none; }
+  .bsection__card--bottom       { flex: 1 1 calc(50% - 12px); max-width: calc(50% - 12px); flex-direction: column; align-items: center; text-align: center; padding: 30px; gap: 20px; }
+  .bsection__card-content       { align-items: center; text-align: center; width: 100%; }
+  .bsection__card-img--bottom   { width: 180px; height: auto; object-fit: contain; }
   .bsection__card-desc          { width: 100%; }
+  .bsection__card-img           { width: 300px; height: 211px; object-fit: contain; }
 
-  .contact-banner               { padding: 80px 0 60px; }
+  .contact-banner               { padding: 60px 0 50px; }
   .contact-banner__title        { font-size: 40px; }
+  .faqs.faqs--contact           { padding-top: 80px; }
 
   .faqs               { padding: 30px 0 80px; }
   .faqs__layout       { flex-direction: column; gap: 50px; }
@@ -478,7 +506,8 @@
   .faqs__desc         { width: 80%; font-size: 17px; margin: 0 auto; }
   .faq-item__answer   { width: 100%; }
 
-  .getstarted__card   { flex-direction: column; padding: 40px 20px; gap: 30px; }
+  .getstarted__card   { flex-direction: column; padding: 40px 20px; gap: 0; }
+  .getstarted__form-box-wrap::before { display: none; }
   .getstarted__left   { width: 100%; padding-top: 0; order: 1; }
   .getstarted__right  { order: -1; width: 100%; }
   .getstarted__title  { font-size: 36px; width: 100%; }
@@ -486,6 +515,7 @@
   .getstarted__star   { position: relative; top: auto; right: auto; width: 100px; }
   .getstarted__title-wrap { display: flex; align-items: flex-start; gap: 16px; }
   .getstarted__contacts { flex-direction: column; gap: 20px; }
+  .getstarted__form-box { height: 950px; }
 
   .footer__main       { padding: 70px 0 63px; }
   .footer__row1       { flex-direction: column; gap: 50px; margin-bottom: 50px; }
@@ -527,15 +557,17 @@
 
   .howitworks         { padding: 60px 0 50px; }
   .howitworks__title  { font-size: 28px; }
-  .howitworks__cards  { flex-direction: column; justify-content: center; align-items: center; }
+  .howitworks__desc   { width: 80%; font-size: 15px; padding-bottom: 50px; }
+  .howitworks__cards  { flex-direction: column; justify-content: center; align-items: center; gap: 20px; }
   .hiw-card           { flex: 0 0 calc(50% - 15px); max-width: calc(80% - 15px); padding: 30px 20px; }
   .hiw-card__top      { align-items: center; }
   .hiw-card__title    { font-size: 24px; }
   .hiw-card__desc     { width: 100%; text-align: center; }
 
   .packages__title    { font-size: 36px; }
-  .packages__cards    { flex-direction: column; align-items: center; }
+  .packages__cards    { flex-direction: column; align-items: center; padding-top: 60px; }
   .pkg-card           { flex: 0 0 calc(50% - 15px); max-width: calc(80% - 15px); }
+  .pkg-card__desc     { width: 100%; padding: 20px 0 45px; }
   .packages__note     { width: 100%; font-size: 11px; padding-top: 36px; }
 
   .whyamb             { padding: 50px 0 30px; }
@@ -544,8 +576,8 @@
   .whyamb__statement  { width: 100%; font-size: 16px; padding-top: 10px; }
   .whyamb__inner::before { display: none; }
 
-  .legal                    { padding: 60px 0 80px; }
-  .legal__container         { padding: 0 30px 0 40px; }
+  .legal                    { padding: 40px 0 40px; }
+  .legal__container         { padding: 0 30px 0 20px; }
   .legal__title             { font-size: 30px; }
   .legal__h2                { font-size: 18px; }
 
@@ -558,30 +590,33 @@
   .about-banner__stat-number  { font-size: 44px; line-height: 1.2; }
   .about-banner__stat-label   { width: 100%; font-size: 15px; }
 
-  .faqs-banner                  { padding: 70px 0 0; }
-  .faqs-banner__title           { font-size: 32px; }
+  .faqs-banner                  { padding: 40px 0 0; }
+  .faqs-banner__title           { font-size: 30px; padding: 30px 0 30px; }
   .faqs-banner__desc            { width: 100%; font-size: 15px; }
 
-  .ai-banner                    { padding: 70px 0 50px; }
+  .ai-banner                    { padding: 40px 0 30px; }
   .ai-banner__title             { font-size: 32px; }
   .ai-banner__desc              { width: 100%; font-size: 15px; }
+  .aisolutions                  { padding: 40px 0 40px; }
+  .aisolutions__header          { margin-bottom: 30px; }
   .aisolutions__title           { font-size: 28px; }
-  .aisolutions__card            { padding: 30px 24px; }
+  .aisolutions__card            { padding: 24px 16px; gap: 30px; }
   .aisolutions__card-title      { font-size: 20px; }
   .aisolutions__card-desc       { font-size: 15px; }
-  .aisolutions__icon            { height: 70px; }
+  .aisolutions__icon            { height: 80px; }
 
-  .bt-banner                    { padding: 70px 0 50px; }
+  .bt-banner                    { padding: 40px 0 30px; }
   .bt-banner__title             { font-size: 32px; }
   .bt-banner__desc              { width: 100%; font-size: 15px; }
   .bsection__title              { font-size: 28px; }
   .bsection__row                { flex-direction: column; }
-  .bsection__card               { flex: none; width: 100%; }
+  .bsection__card               { flex: none; width: 100%; max-width: 100%; }
   .bsection__card--bottom       { flex: none; max-width: 100%; width: 100%; flex-direction: column; padding: 30px; }
   .bsection__card-desc          { width: 100%; font-size: 13px; }
 
-  .contact-banner               { padding: 70px 0 50px; }
+  .contact-banner               { padding: 40px 0 40px; }
   .contact-banner__title        { font-size: 32px; }
+  .faqs.faqs--contact           { padding-top: 50px; }
 
   .founder__title           { font-size: 54px; }
   .founder__card-name       { font-size: 36px; }
@@ -594,16 +629,18 @@
   .our-model__card-label    { font-size: 20px; }
   .our-model__tagline       { font-size: 22px; }
   .our-model__cards         { flex-direction: column; }
-  .our-model__card          { flex: none; width: 100%; }
+  .our-model__card          { flex: none; width: 100%; max-width: calc(100% - 15px); }
   .our-philosophy__title    { font-size: 30px; }
   .our-philosophy__desc     { width: 100%; font-size: 18px; }
   .our-philosophy__star-wrap { width: 260px; height: 260px; }
-  .our-philosophy__star     { width: 260px; }
+  .our-philosophy__star     { display: none; }
+  .whatwedo           { padding: 60px 0 70px; }
   .whatwedo__title          { font-size: 28px; }
+  .whatwedo__star     { animation: none; }
   .whatwedo__desc           { width: 100%; font-size: 15px; }
   .whatwedo__cards          { flex-direction: column; }
   .whatwedo__card           { flex: none; width: 100%; }
-  .whatwedo__tagline        { font-size: 24px; }
+  .whatwedo__tagline        { font-size: 24px; padding-top: 40px; }
 
   .faqs               { padding: 30px 0 50px; }
   .faqs__title        { font-size: 44px; }
@@ -611,7 +648,8 @@
   .faq-item__question { font-size: 16px; }
 
   .getstarted__card   { padding: 30px 20px; }
-  .getstarted__title  { font-size: 40px; }
+  .getstarted__title  { font-size: 35px; }
+  .getstarted__left   { width: 100%; padding-top: 50px; order: 1; }
   .getstarted__form-box { height: 950px; }
 
   .footer__nav        { grid-template-columns: repeat(1, auto); gap: 16px; }
@@ -664,17 +702,19 @@
   .pkg-card__desc     { font-size: 13px; }
   .packages__note     { width: 100%; font-size: 11px; padding-top: 36px; }
 
-  .about-banner               { padding: 60px 0 40px; }
+  .about-banner               { padding: 30px 0 20px; }
   .about-banner__title        { font-size: 28px; padding: 24px 0 20px; }
   .about-banner__desc         { font-size: 15px; }
   .about-banner__sub          { font-size: 15px; padding: 30px 0; }
   .about-banner__stat-number  { font-size: 36px; }
   .about-banner__stat-label   { font-size: 14px; }
 
-  .founder            { padding: 60px 0 40px; }
+  .founder            { padding: 40px 0 40px; }
   .founder__title     { font-size: 44px; }
   .founder__card-name { font-size: 28px; }
   .founder__desc      { font-size: 14px; }
+  .our-model          { padding: 40px 0; }
+  .our-model__card    { flex: none; width: 100%; max-width: calc(100% - 15px); padding: 30px 15px; }
   .our-model__title   { font-size: 24px; }
   .our-model__desc    { font-size: 14px; }
   .our-model__tagline { font-size: 20px; }
@@ -683,6 +723,7 @@
   .our-philosophy__desc   { font-size: 16px; }
   .our-philosophy__star-wrap { width: 220px; height: 220px; }
   .our-philosophy__star    { width: 220px; }
+  .whatwedo           { padding: 60px 0 60px; }
   .whatwedo__title    { font-size: 24px; }
   .whatwedo__desc     { font-size: 14px; }
   .whatwedo__tagline  { font-size: 18px; padding-top: 40px; }
@@ -698,8 +739,8 @@
   .whyamb__statement  { font-size: 15px; padding-top: 10px; }
   .whyamb__inner::before { display: none; }
 
-  .legal                    { padding: 50px 0 70px; }
-  .legal__container         { padding: 0 20px 0 24px; }
+  .legal                    { padding: 30px 0 30px; }
+  .legal__container         { padding: 0 20px 0 20px; }
   .legal__title             { font-size: 26px; }
   .legal__h2                { font-size: 17px; }
   .legal__h3                { font-size: 14px; }
@@ -709,10 +750,10 @@
 
   .ai-banner                    { padding: 60px 0 40px; }
   .ai-banner__title             { font-size: 26px; }
-  .aisolutions                  { padding: 50px 0; }
+  .aisolutions                  { padding: 40px 0; }
   .aisolutions__title           { font-size: 24px; }
-  .aisolutions__card            { padding: 30px 20px; }
-  .aisolutions__icon            { height: 60px; }
+  .aisolutions__card            { padding: 24px 16px; gap: 30px; }
+  .aisolutions__icon            { height: 80px; }
 
   .bt-banner                    { padding: 60px 0 40px; }
   .bt-banner__title             { font-size: 26px; }
@@ -720,7 +761,7 @@
   .bsection__title              { font-size: 24px; }
   .bsection__card--bottom       { flex-direction: column; padding: 30px; }
 
-  .contact-banner               { padding: 60px 0 40px; }
+  .contact-banner               { padding: 40px 0 40px; }
   .contact-banner__title        { font-size: 28px; }
 
   .faqs               { padding: 30px 0 50px; }
@@ -731,18 +772,25 @@
   .faq-item__question { font-size: 15px; }
 
   .getstarted         { padding: 40px 0 60px; }
-  .getstarted__card   { padding: 30px 20px 40px; gap: 30px; }
+  .getstarted__card::before { display: none; }
+  .getstarted__card   { padding: 0; gap: 20px; }
+  .getstarted__left   { width: 100%; padding-top: 20px; order: 1; }
+  .getstarted__form-box-wrap { border-radius: 16px; }
+  .getstarted__form-box { height: 950px; border-radius: 16px; }
   .getstarted__title  { font-size: 34px; }
-  .getstarted__desc   { font-size: 15px; padding: 20px 0 40px; }
-  .getstarted__form-box { height: 1000px; }
+  .getstarted__desc   { font-size: 15px; padding: 16px 0 30px; }
+  .getstarted__contacts { gap: 16px; }
 
-  .footer__main       { padding: 70px 0 50px; }
+  .footer__main       { padding: 60px 0 50px; }
+  .footer__row1       { flex-direction: column; gap: 30px; margin-bottom: 30px; }
+  .footer__row2       { flex-direction: column; gap: 30px; }
   .footer__nav        { grid-template-columns: repeat(1, auto); gap: 14px; }
   .footer__nav-link   { font-size: 15px; }
   .footer__logo       { width: 180px; }
   .footer__copy       { font-size: 13px; }
   .footer__legal a    { font-size: 13px; }
-  .footer__bottom     { padding: 30px 0; }
+  .footer__bottom     { padding: 20px 0; }
+  .footer__social-icons { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 20px; column-gap: 20px; }
 }
 
 
@@ -771,6 +819,7 @@
   .hwc-card__title    { font-size: 20px; }
   .hwc-card__desc     { font-size: 14px; }
 
+  .howitworks         { padding: 50px 0 10px; }
   .howitworks__title  { font-size: 20px; }
   .howitworks__desc   { width: 100%; }
   .hiw-card           { max-width: 100%; }
@@ -783,6 +832,8 @@
 
   .founder__title         { font-size: 36px; }
   .founder__card-name     { font-size: 28px; }
+  .founder__image-wrap    { width: 100%; height: auto; position: relative; top: 0; margin: 0 auto; }
+  .our-model__card        { flex: none; width: 100%; max-width: calc(100% - 15px); padding: 30px 15px; }
   .our-model__title       { font-size: 22px; }
   .our-philosophy__title  { font-size: 22px; }
   .whatwedo__title        { font-size: 22px; }
@@ -799,25 +850,29 @@
   .about-banner__title        { font-size: 24px; padding: 20px 0 16px; }
   .about-banner__desc         { font-size: 14px; }
   .about-banner__sub          { font-size: 14px; padding: 24px 0; }
-  .about-banner__stat-box     { padding: 20px 16px; }
+  .about-banner__stats        { flex-direction: column; }
+  .about-banner__stat-box     { flex: none; width: 100%; padding: 20px 16px; }
   .about-banner__stat-number  { font-size: 30px; }
   .about-banner__stat-label   { font-size: 13px; }
 
-  .faqs-banner                  { padding: 60px 0 0; }
-  .faqs-banner__title           { font-size: 22px; }
+  .faqs-banner                  { padding: 40px 0 0; }
+  .faqs-banner__title           { font-size: 27px; }
   .faqs-banner__desc            { font-size: 13px; }
 
-  .ai-banner                    { padding: 60px 0 40px; }
+  .ai-banner                    { padding: 30px 0 30px; }
   .ai-banner__title             { font-size: 22px; }
   .ai-banner__desc              { font-size: 13px; }
   .aisolutions__title           { font-size: 20px; }
   .aisolutions__card-title      { font-size: 16px; }
   .aisolutions__card-desc       { font-size: 13px; }
-  .aisolutions__card            { padding: 24px 16px; gap: 20px; }
+  .aisolutions__card            { padding: 24px 16px; gap: 30px; }
+  .aisolutions__icon            { height: 80px; }
 
-  .bt-banner                    { padding: 60px 0 40px; }
+  .bt-banner                    { padding: 40px 0 40px; }
   .bt-banner__title             { font-size: 22px; }
   .bt-banner__desc              { font-size: 13px; }
+  .bsection                     { padding: 30px 0; }
+  .bsection__header             { padding-bottom: 40px; }
   .bsection__title              { font-size: 20px; }
   .bsection__card               { padding: 24px 20px; }
 
@@ -842,12 +897,12 @@
   .faq-item__question { font-size: 14px; }
   .faqs__star         { width: 70px; }
 
-  .getstarted         { padding: 40px 0; }
-  .getstarted__card::before { display: none; }
-  .getstarted__card   { padding: 0; gap: 30px; }
+  .getstarted         { padding: 30px 0 50px; }
+  .getstarted__card   { padding: 0; gap: 20px; }
+  .getstarted__form-box { height: 1050px; border-radius: 14px; }
   .getstarted__title  { font-size: 24px; }
-  .getstarted__desc   { font-size: 14px; padding: 16px 0 30px; }
-  .getstarted__form-box { height: 1000px; }
+  .getstarted__desc   { font-size: 14px; padding: 14px 0 24px; }
+  .getstarted__contacts { gap: 14px; }
 
   .footer__main       { padding: 40px 0 50px; }
   .footer__desc       { font-size: 14px; padding-top: 21px; }
@@ -878,6 +933,7 @@
   .pkg-card__title    { font-size: 24px; }
 
   .founder__title         { font-size: 30px; }
+  .our-model__card        { flex: none; width: 100%; max-width: calc(100% - 15px); padding: 30px 15px; }
   .our-model__title       { font-size: 19px; }
   .our-philosophy__title  { font-size: 19px; }
   .whatwedo__title        { font-size: 19px; }
@@ -897,6 +953,8 @@
   .ai-banner__title             { font-size: 19px; }
   .ai-banner__desc              { font-size: 12px; }
   .aisolutions__title           { font-size: 18px; }
+  .aisolutions__card            { padding: 24px 16px; gap: 30px; }
+  .aisolutions__icon            { height: 80px; }
   .aisolutions__card-title      { font-size: 15px; }
   .aisolutions__card-desc       { font-size: 12px; }
 
@@ -918,9 +976,10 @@
   .faqs__title        { font-size: 28px; }
   .faq-item__question { font-size: 13px; }
 
+  .getstarted__card   { padding: 0; gap: 20px; }
   .getstarted__title  { font-size: 24px; }
   .getstarted__desc   { font-size: 13px; }
-  .getstarted__form-box { height: 1000px; }
+  .getstarted__form-box { height: 1200px; }
 
   .faqs__title        { font-size: 26px; }
   .faqs__desc         { font-size: 13px; }

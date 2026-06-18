@@ -16,7 +16,7 @@ export default function WhatWeDo() {
 
           <img src={starImg} alt="" className="whatwedo__star" />
 
-          <h2 className="whatwedo__title">What We&apos;re Here To Do</h2>
+          <h2 className="whatwedo__title">What We Do</h2>
 
           <p className="whatwedo__desc">
             AMB Strategic Group helps organizations transform the way they operate and grow

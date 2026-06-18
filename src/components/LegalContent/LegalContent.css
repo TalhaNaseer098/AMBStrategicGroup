@@ -67,6 +67,7 @@
 .legal__ul {
   margin: 0 0 12px;
   padding-left: 22px;
+  list-style-type: disc;
 }
 
 .legal__li {
