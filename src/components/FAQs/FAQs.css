@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+.faqs.faqs--contact {
+  padding-top: 150px;
+}
+
 .faqs::before {
   content: '';
   position: absolute;

@@ -1,33 +1,30 @@
-import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
-import About from './components/About/About'
-import HowWeCan from './components/HowWeCan/HowWeCan'
-import HowItWorks from './components/HowItWorks/HowItWorks'
-import WhyAMB from './components/WhyAMB/WhyAMB'
-import Packages from './components/Packages/Packages'
-import FAQs from './components/FAQs/FAQs'
-import GetStarted from './components/GetStarted/GetStarted'
-import Footer from './components/Footer/Footer'
+import { Routes, Route } from 'react-router-dom'
+import ScrollToTop            from './components/ScrollToTop/ScrollToTop'
+import HomePage               from './pages/HomePage'
+import AboutPage              from './pages/AboutPage'
+import BusinessTransformationPage from './pages/BusinessTransformationPage'
+import AIAutomationPage       from './pages/AIAutomationPage'
+import FAQsPage               from './pages/FAQsPage'
+import ContactPage            from './pages/ContactPage'
+import PrivacyPolicyPage      from './pages/PrivacyPolicyPage'
+import TermsOfServicesPage    from './pages/TermsOfServicesPage'
 import './App.css'
 import './responsive.css'
 
 function App() {
   return (
     <>
-      <div className="hero-wrapper">
-        <Navbar />
-        <Hero />
-      </div>
-      <main>
-        <About />
-        <HowWeCan />
-        <HowItWorks />
-        <Packages />
-        <WhyAMB />
-        <FAQs />
-        <GetStarted />
-      </main>
-      <Footer />
+      <ScrollToTop />
+      <Routes>
+      <Route path="/"                        element={<HomePage />} />
+      <Route path="/about"                   element={<AboutPage />} />
+      <Route path="/business-transformation" element={<BusinessTransformationPage />} />
+      <Route path="/ai-automation"           element={<AIAutomationPage />} />
+      <Route path="/faqs"                    element={<FAQsPage />} />
+      <Route path="/contact"                 element={<ContactPage />} />
+      <Route path="/privacy-policy"          element={<PrivacyPolicyPage />} />
+      <Route path="/terms-of-services"       element={<TermsOfServicesPage />} />
+      </Routes>
     </>
   )
 }

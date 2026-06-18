@@ -26,11 +26,11 @@ const faqs = [
   },
 ]
 
-export default function FAQs() {
+export default function FAQs({ className = '' }) {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section id="faqs" className="faqs">
+    <section id="faqs" className={`faqs${className ? ' ' + className : ''}`}>
       <div className="container">
         <div className="faqs__layout">
 

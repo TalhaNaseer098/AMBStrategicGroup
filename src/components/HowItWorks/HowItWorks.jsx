@@ -23,9 +23,9 @@ const cards = [
   },
 ]
 
-export default function HowItWorks() {
+export default function HowItWorks({ noBefore }) {
   return (
-    <section id="how-it-works" className="howitworks">
+    <section id="how-it-works" className={`howitworks${noBefore ? ' howitworks--no-before' : ''}`}>
       <div className="container">
 
         <div className="howitworks__header">

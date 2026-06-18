@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import aiImg from '../../imagesfolder/Howwecansection/aiautomationboximg.png'
 import bizImg from '../../imagesfolder/Howwecansection/businesstransformationboximg.png'
 import btnIcon from '../../imagesfolder/ambiconbutton.png'
@@ -9,12 +10,14 @@ const cards = [
     img: aiImg,
     desc: 'We help organizations identify where AI actually improves performance — then design and implement systems that reduce manual work and increase operational speed.',
     btnText: 'Learn More About AI & Automation',
+    link: '/ai-automation',
   },
   {
     title: 'Business Transformation',
     img: bizImg,
     desc: 'We fix the real problem underneath most "AI initiatives" — broken processes, unclear ownership, and inefficient delivery systems.',
     btnText: 'Learn More About Business Transformation',
+    link: '/business-transformation',
   },
 ]
 
@@ -39,10 +42,10 @@ export default function HowWeCan() {
               <h3 className="hwc-card__title">{card.title}</h3>
               <img src={card.img} alt={card.title} className="hwc-card__img" />
               <p className="hwc-card__desc">{card.desc}</p>
-              <a href="#" className="hwc-card__btn">
+              <Link to={card.link} className="hwc-card__btn">
                 <span>{card.btnText}</span>
                 <img src={btnIcon} alt="" className="hwc-card__btn-icon" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

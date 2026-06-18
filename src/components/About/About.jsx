@@ -40,7 +40,7 @@ export default function About() {
             <div className="about__person-info">
               <p className="about__founder">Founder &amp; CEO</p>
               <h3 className="about__name">Azra Rehan</h3>
-              <a href="#" className="about__linkedin">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="about__linkedin">
                 Connect on LinkedIn
               </a>
             </div>
@@ -59,7 +59,7 @@ export default function About() {
 
         {/* Know More Button */}
         <div className="about__btn-wrap">
-          <a href="#" className="about__btn">
+          <a href="#contact" className="about__btn">
             Know More
             <img src={btnIcon} alt="" className="about__btn-icon" />
           </a>

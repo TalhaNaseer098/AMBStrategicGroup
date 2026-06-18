@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom'
 import footerLogo from '../../imagesfolder/ambheaderlogo.png'
 import facebookIcon from '../../imagesfolder/footersection/facebookicon.png'
 import instaIcon from '../../imagesfolder/footersection/instaicon.png'
@@ -6,19 +7,19 @@ import xIcon from '../../imagesfolder/footersection/xicon.png'
 import './Footer.css'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Business Transformation', href: '#how-we-can' },
-  { label: 'AI & Automation', href: '#how-it-works' },
-  { label: 'FAQs', href: '#faqs' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home',                    to: '/'                        },
+  { label: 'About',                   to: '/about'                   },
+  { label: 'Business Transformation', to: '/business-transformation' },
+  { label: 'AI & Automation',         to: '/ai-automation'           },
+  { label: 'FAQs',                    to: '/faqs'                    },
+  { label: 'Contact Us',              to: '/contact'                 },
 ]
 
 const socialIcons = [
-  { label: 'Facebook', img: facebookIcon },
-  { label: 'Instagram', img: instaIcon },
-  { label: 'LinkedIn', img: linkedIcon },
-  { label: 'X', img: xIcon },
+  { label: 'Facebook',  img: facebookIcon, href: 'https://www.facebook.com'        },
+  { label: 'Instagram', img: instaIcon,     href: 'https://www.instagram.com'       },
+  { label: 'LinkedIn',  img: linkedIcon,    href: 'https://www.linkedin.com'        },
+  { label: 'X',         img: xIcon,         href: 'https://www.x.com'               },
 ]
 
 export default function Footer() {
@@ -39,9 +40,9 @@ export default function Footer() {
             </div>
             <nav className="footer__nav">
               {navLinks.map((link) => (
-                <a key={link.label} href={link.href} className="footer__nav-link">
+                <Link key={link.label} to={link.to} className="footer__nav-link">
                   <span className="footer__nav-link-text" data-text={link.label}>{link.label}</span>
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -52,7 +53,7 @@ export default function Footer() {
               <p className="footer__social-label">Follow us on</p>
               <div className="footer__social-icons">
                 {socialIcons.map((icon) => (
-                  <a key={icon.label} href="#" className="footer__social-icon" aria-label={icon.label}>
+                  <a key={icon.label} href={icon.href} target="_blank" rel="noopener noreferrer" className="footer__social-icon" aria-label={icon.label}>
                     <img src={icon.img} alt={icon.label} />
                   </a>
                 ))}
@@ -80,8 +81,8 @@ export default function Footer() {
         <div className="container">
           <p className="footer__copy">© 2026 AMB Strategic Group · Woman-Owned Business</p>
           <div className="footer__legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Services</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-services">Terms of Services</Link>
           </div>
         </div>
       </div>

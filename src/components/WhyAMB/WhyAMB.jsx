@@ -1,7 +1,7 @@
 import strategicBottomImg from '../../imagesfolder/strategicsection/strategicsectionbottomimg.png'
 import './WhyAMB.css'
 
-export default function WhyAMB() {
+export default function WhyAMB({ bottomImg, noFlip }) {
   return (
     <section id="why-amb" className="whyamb">
       <div className="container">
@@ -26,7 +26,11 @@ export default function WhyAMB() {
           real execution.
         </p>
         <div className="whyamb__bottom-row">
-          <img src={strategicBottomImg} alt="" className="whyamb__bottom-img" />
+          <img
+            src={bottomImg || strategicBottomImg}
+            alt=""
+            className={`whyamb__bottom-img${noFlip ? ' whyamb__bottom-img--no-flip' : ''}`}
+          />
         </div>
       </div>
     </section>

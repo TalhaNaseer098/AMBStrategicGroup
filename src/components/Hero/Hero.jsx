@@ -1,8 +1,18 @@
 import heroLeftImg from '../../imagesfolder/herosectionimg/heroleftimg.png'
 import heroRightImg from '../../imagesfolder/herosectionimg/herorightimg.png'
 import btnIcon from '../../imagesfolder/herosectionimg/ambbuttonicon.png'
-import hsbcLogo from '../../imagesfolder/herosectionimg/HSBCimgamb.png'
 import './Hero.css'
+
+const logos = [
+  'Accenture',
+  'UNICEF',
+  'Guidehouse',
+  'HSBC',
+  'Bank of America',
+  'United Bank',
+  'Deloitte',
+  'McKinsey & Co',
+]
 
 export default function Hero() {
   return (
@@ -11,6 +21,7 @@ export default function Hero() {
       <img src={heroLeftImg}  alt="" className="hero__side-img hero__side-img--left"  />
       <img src={heroRightImg} alt="" className="hero__side-img hero__side-img--right" />
 
+      <div className="container">
       <div className="hero__content">
 
         <div className="hero__badge">
@@ -36,8 +47,17 @@ export default function Hero() {
           Practitioner <span className="hero__practitioner-gradient">Experience Across</span>
         </p>
 
-        <img src={hsbcLogo} alt="Partner logos" className="hero__logos-img" />
+        <div className="hero__logos-wrap">
+          <div className="hero__logos-track">
+            {[...logos, ...logos, ...logos].map((name, i) => (
+              <span key={i} className="hero__logo-item">
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
 
+      </div>
       </div>
     </section>
   )

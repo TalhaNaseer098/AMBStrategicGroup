@@ -58,10 +58,11 @@ export default function GetStarted() {
 
           {/* Right - Form */}
           <div className="getstarted__right">
+            <div className="getstarted__form-box-wrap">
             <div className="getstarted__form-box">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/uGgHhdxKiKpdsLeh1125"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+                style={{ width: '100%', height: '100%', border: 'none' }}
                 id="inline-uGgHhdxKiKpdsLeh1125"
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
@@ -76,6 +77,7 @@ export default function GetStarted() {
                 data-form-id="uGgHhdxKiKpdsLeh1125"
                 title="Website Form"
               />
+            </div>
             </div>
           </div>
 

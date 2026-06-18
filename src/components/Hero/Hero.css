@@ -172,10 +172,34 @@
   background-clip: text;
 }
 
-/* Partner logos image */
-.hero__logos-img {
-  margin-top: 33px;
-  width: 975px;
-  height: auto;
-  display: block;
+/* Partner logos marquee */
+.hero__logos-wrap {
+  margin-top: 1.72vw;
+  width: 52.08vw;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(to right, transparent 0%, #000 28%, #000 72%, transparent 100%);
+  mask: linear-gradient(to right, transparent 0%, #000 28%, #000 72%, transparent 100%);
+}
+
+.hero__logos-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: logoMarquee 40s linear infinite;
+}
+
+.hero__logo-item {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.94vw;
+  color: #FFFFFF;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 1.56vw;
+  letter-spacing: 0.01em;
+}
+
+@keyframes logoMarquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
 }

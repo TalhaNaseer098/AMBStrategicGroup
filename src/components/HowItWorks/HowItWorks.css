@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.howitworks--no-before::before {
+  display: none;
+}
+
 .howitworks::before {
   content: '';
   position: absolute;
@@ -31,6 +35,16 @@
 .howitworks__star {
   width: 77px;
   height: auto;
+  animation: howitworksStarSpin 8s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes howitworksStarSpin {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(90deg) scale(1.08); }
+  50%  { transform: rotate(180deg) scale(1); }
+  75%  { transform: rotate(270deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1); }
 }
 
 .howitworks__title {
