@@ -316,7 +316,7 @@
 
   /* ── Footer ── */
   .footer::after          { height: 41.67vw; }
-  .footer__main           { padding: 8.33vw 0 3.28vw; }
+  .footer__main           { padding: 6.77vw 0 3.13vw; } /* 130px 0 60px */
   .footer__row1           { margin-bottom: 3.96vw; }
   .footer__left           { width: 26.04vw; }
   .footer__logo           { width: 13.13vw; }

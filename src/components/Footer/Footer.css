@@ -1,5 +1,5 @@
 .footer {
-  background: #000000;
+  background: #08061A;
   position: relative;
 }
 
@@ -7,7 +7,9 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/src/imagesfolder/footersection/footerbeforeimg.png');
+  background-image:
+    linear-gradient(to bottom, #000000 0%, transparent 18%),
+    url('/src/imagesfolder/footersection/footerbeforeimg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -229,7 +231,6 @@
 .footer__bottom {
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 60px 0px 50px;
 }
 
@@ -237,6 +238,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
 }
 
 .footer__copy {
